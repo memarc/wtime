@@ -1,0 +1,15 @@
+REQUIREMENTS
+------------
+libc
+
+INSTALLATION
+------------
+- set up config.mk to fit your system.
+
+`make clean`
+`make`
+`make install` (you'll probably have to be root for this step)
+
+UNINSTALLATION
+--------------
+- make uninstall

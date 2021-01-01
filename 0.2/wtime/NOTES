@@ -1,0 +1,3 @@
+!! The .wtimed directory has to be created before the use of wtimed !!
+
+Data files are now located in the .wtimed directory in the users home dir. In effect , if you used the 0.1 version , you'll have to move your old .wtimed file, to .wtimed/default ('default' is the default task name).

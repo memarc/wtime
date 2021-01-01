@@ -1,0 +1,63 @@
+.\" Process this file with
+.\" groff -man -Tascii foo.1
+.\"
+.TH WTIME 1 "JUNE 2006"
+.SH NAME
+wtime
+.SH SYNOPSIS
+.B wtime
+.B [ \-t 
+.I task
+.B ]
+.B [
+.I <action>
+.B ]
+.SH DESCRIPTION
+.B wtime
+is a command-line utility for tracking time spent working on arbitrary tasks. All the time data is saved in files residing in the
+.B .wtimed
+directory in the users home directory. This directory has to be created before the first use of wtime. The names of the files in this directory correspond to task names as set with the -t option.
+.SH OPTIONS
+.TP
+.BI \-t " task"
+Specify the name of the task. It has to be a valid filename. Only the first 32 characters are taken into account. The default value is "default".
+.TP
+.I action
+is one of the following:
+.RS
+.TP
+.B \-h
+Display help.
+.TP
+.BI \-a
+Start counting.
+.TP
+.BI \-s
+Stop counting.
+.TP
+.BI \-c
+Display current elapsed time in seconds.
+.TP
+.B \-r
+.RB [
+.I start
+.RB [
+.I end
+.RB ]]
+.RS
+Display time spent on the task during the specified period. The parametres
+.I start
+and 
+.I end
+represent the begginning and end of the reporting period respectively. The format of 
+.I start
+and 
+.I end
+is '%d-%m-%Y' (see strptime (1)).
+The default values are the current time for
+.I end
+and the begginning of the current month for the
+.I start
+parameter.
+.SH AUTHOR
+Jan Podrouzek <podrouzek@gmail.com>

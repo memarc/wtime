@@ -1,0 +1,37 @@
+About
+-----
+wt is a time tracking tool
+
+Requirements
+------------
+libc
+
+Installation
+------------
+as normal user:
+$ make clean
+$ make
+
+as root:
+$ make install
+
+Configuration
+-------------
+none
+
+Usage
+-----
+wt -[asch] 
+wt -r [<start> [<stop>]]
+
+options:
+-a : start counting
+-s : stop counting
+-c : display currently elapse time
+-h : display help
+
+-r [<start> [<stop>]] - display the sum from the period defined by start and stop
+                      - start defaults to the begining of the current month
+                      - stop defaults to the current time
+                      - the format of start and stop is %d-%m-%Y (man strptime(3))
+
